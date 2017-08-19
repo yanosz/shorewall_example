@@ -1,0 +1,4 @@
+#SOURCE    	DEST        	POLICY      	LOG LEVEL    LIMIT:BURST
+fw		upl		ACCEPT
+all		all		REJECT		error
+

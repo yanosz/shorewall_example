@@ -1,0 +1,9 @@
+#ACTION         SOURCE          DEST               	PROTO    DEST PORT   SOURCE    ORIGINAL                                                                                         
+#?SECTION NEW
+
+ACCEPT		$FW		net     		udp	1194,655	-	- #Allow OpenVPN, Tinc
+ACCEPT		$FW		any			tcp	ssh	        -	- #SSH ist OK    
+ACCEPT		net		any			udp	67,68	        -	- # DHCP ist notwendig
+ACCEPT		$FW		net			udp	67,68	        -	- # DHCP ist notwendig
+ACCEPT		any		any			icmp	-	        -	- # ICMP brauche ich      
+ACCEPT		any		any			igmp	-	        -	- # IGMP brauche ich	

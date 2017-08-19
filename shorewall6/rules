@@ -1,0 +1,11 @@
+#ACTION         SOURCE          DEST               		PROTO    DEST PORT   SOURCE    ORIGINAL                                                                                         
+#LOG:3          any             any                     	tcp     smtp    -       -
+#?SECTION NEW
+
+# Neuer Supernode (v2)
+ACCEPT		$FW		net                     	udp	1194,655	-	- # OpenVPN, Tinc sind ok
+ACCEPT		$FW		any				tcp	ssh	-	-         # SSH geht
+ACCEPT		$FW		any:fe80::/64			-	-	-	-         # Link Local will ich erreichen
+ACCEPT		net		$FW				udp	546,547	-	-         # DHCP wird akzeptiert
+ACCEPT		any		any			icmp	-	-	-                 # ICMPv6 ist auch ok
+

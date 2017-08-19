@@ -1,0 +1,5 @@
+#ZONE   TYPE             OPTIONS
+fw      firewall
+net     ipv6
+upl	ipv6
+

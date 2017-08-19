@@ -1,0 +1,4 @@
+#ZONE    INTERFACE      OPTIONS
+net     eth+
+net	wlan+
+upl	tun+
